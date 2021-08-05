@@ -11,7 +11,7 @@ spec:
     server: https://kubernetes.default.svc
   project: default
   source:
-    repoURL: https://github.com/isouza-daitan/guestbook-go
+    repoURL: https://github.com/isouza-daitan/guestbook-go-config
     path: overlays/prod
     targetRevision: HEAD
   syncPolicy:
