@@ -12,7 +12,7 @@ spec:
   source:
     kustomize:
       images:
-      - guestbook-image=ghcr.io/isouza-daitan/guestbook:v1.5
+      - guestbook-image=ghcr.io/isouza-daitan/guestbook:v1.6
     path: overlays/staging
     repoURL: https://github.com/isouza-daitan/guestbook-go-config
     targetRevision: HEAD
