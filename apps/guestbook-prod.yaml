@@ -15,8 +15,8 @@ spec:
     path: overlays/prod
     targetRevision: HEAD
   syncPolicy:
-    automated: {}
+    automated:
+      prune: true
+      selfHeal: true
     syncOptions:
-      - Prune=true
-      - SelfHeal=true
       - CreateNamespace=true
