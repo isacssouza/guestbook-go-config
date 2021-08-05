@@ -1,22 +1,24 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: guestbook-staging
-  namespace: argocd
   finalizers:
-    - resources-finalizer.argocd.argoproj.io
+  - resources-finalizer.argocd.argoproj.io
+  name: guestbook-staging
 spec:
   destination:
     namespace: guestbook-staging
     server: https://kubernetes.default.svc
   project: default
   source:
-    repoURL: https://github.com/isouza-daitan/guestbook-go
+    kustomize:
+      images:
+      - guestbook-image=ghcr.io/isouza-daitan/guestbook:v1.4
     path: overlays/staging
+    repoURL: https://github.com/isouza-daitan/guestbook-go
     targetRevision: HEAD
   syncPolicy:
     automated:
       prune: true
       selfHeal: true
     syncOptions:
-      - CreateNamespace=true
+    - CreateNamespace=true
