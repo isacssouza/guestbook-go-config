@@ -10,7 +10,7 @@ spec:
   source:
     kustomize:
       images:
-      - ghcr.io/isouza-daitan/guestbook-go:pr-3
+      - ghcr.io/isouza-daitan/guestbook-go:pr-3-1099909628
     path: overlays/pr
     repoURL: https://github.com/isouza-daitan/guestbook-go-config
   syncPolicy:
