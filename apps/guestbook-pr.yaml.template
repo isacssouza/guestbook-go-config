@@ -1,16 +1,14 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: guestbook-pr-3
+  name: guestbook-${ENV_NAME}
 spec:
   destination:
-    namespace: guestbook-pr-3
+    namespace: guestbook-${ENV_NAME}
     server: https://kubernetes.default.svc
   project: default
   source:
-    kustomize:
-      images:
-      - guestbook-image=ghcr.io/isouza-daitan/guestbook:pr-3-1099948755
+    kustomize: {}
     path: overlays/pr
     repoURL: https://github.com/isouza-daitan/guestbook-go-config
   syncPolicy:
