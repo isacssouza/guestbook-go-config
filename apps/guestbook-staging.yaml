@@ -12,11 +12,11 @@ spec:
   project: default
   source:
     repoURL: https://github.com/isouza-daitan/guestbook-go
-    path: ops/overlays/staging
+    path: overlays/staging
     targetRevision: HEAD
   syncPolicy:
-    automated:
-      prune: true
-      selfHeal: true
+    automated: {}
     syncOptions:
+      - Prune=true
+      - SelfHeal=true
       - CreateNamespace=true
