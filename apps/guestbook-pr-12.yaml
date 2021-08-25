@@ -11,7 +11,7 @@ spec:
     kustomize:
       images:
         - ghcr.io/isouza-daitan/guestbook:pr-12-1
-    path: overlays/pr-12
+    path: overlays/pr
     repoURL: https://github.com/isouza-daitan/guestbook-go-config
   syncPolicy:
     automated:
