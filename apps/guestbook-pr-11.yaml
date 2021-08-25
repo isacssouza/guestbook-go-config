@@ -10,7 +10,7 @@ spec:
   source:
     kustomize:
       images:
-        - ghcr.io/isouza-daitan/guestbook:fac4377a5b02d43400817c6728ab757bff2f4f67
+        - ghcr.io/isouza-daitan/guestbook:bf82053adf4ca3cd1d166945eab97849721b9d0f
     path: overlays/pr
     repoURL: https://github.com/isouza-daitan/guestbook-go-config
   syncPolicy:
@@ -18,4 +18,4 @@ spec:
       prune: true
       selfHeal: true
     syncOptions:
-    - CreateNamespace=true
+      - CreateNamespace=true
