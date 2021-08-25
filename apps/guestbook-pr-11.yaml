@@ -1,0 +1,21 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: guestbook-pr-11
+spec:
+  destination:
+    namespace: guestbook-pr-11
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    kustomize:
+      images:
+        - ghcr.io/isouza-daitan/guestbook:fac4377a5b02d43400817c6728ab757bff2f4f67
+    path: overlays/pr
+    repoURL: https://github.com/isouza-daitan/guestbook-go-config
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+    - CreateNamespace=true
