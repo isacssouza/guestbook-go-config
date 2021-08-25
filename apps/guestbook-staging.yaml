@@ -1,8 +1,6 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  finalizers:
-  - resources-finalizer.argocd.argoproj.io
   name: guestbook-staging
 spec:
   destination:
@@ -12,10 +10,9 @@ spec:
   source:
     kustomize:
       images:
-      - guestbook-image=ghcr.io/isouza-daitan/guestbook:v1.6
+        - ghcr.io/isouza-daitan/guestbook:
     path: overlays/staging
     repoURL: https://github.com/isouza-daitan/guestbook-go-config
-    targetRevision: HEAD
   syncPolicy:
     automated:
       prune: true
