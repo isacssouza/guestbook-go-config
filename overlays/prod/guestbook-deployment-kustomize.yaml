@@ -10,7 +10,7 @@ spec:
         resources:
           requests:
             cpu: "0.1"
-            memory: "100MiB"
+            memory: "100Mi"
           limits:
             cpu: "0.2"
-            memory: "200Mib"
+            memory: "200Mi"
