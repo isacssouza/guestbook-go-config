@@ -8,11 +8,9 @@ spec:
     server: https://kubernetes.default.svc
   project: default
   source:
-    kustomize:
-      images:
-        - ghcr.io/isouza-daitan/guestbook:v1.6
-    path: overlays/staging
     repoURL: https://github.com/isouza-daitan/guestbook-go-config
+    path: overlays/staging
+    targetRevision: HEAD
   syncPolicy:
     automated:
       prune: true

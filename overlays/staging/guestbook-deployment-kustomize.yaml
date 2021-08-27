@@ -7,4 +7,10 @@ spec:
     spec:
       containers:
       - name: guestbook
-        image: ghcr.io/isouza-daitan/guestbook:v1.2
+        resources:
+          requests:
+            cpu: "0.1"
+            memory: "100MiB"
+          limits:
+            cpu: "0.1"
+            memory: "100Mib"
