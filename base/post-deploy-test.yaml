@@ -16,6 +16,6 @@ spec:
           - "--silent"
           - "--show-error"
           - "--fail-with-body"
-          - "http://guestbook:3000/infoa"
+          - "http://guestbook:3000/info"
       restartPolicy: Never
   backoffLimit: 2
