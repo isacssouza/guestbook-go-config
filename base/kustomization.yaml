@@ -5,4 +5,3 @@ resources:
 - guestbook-service.yaml
 - redis-deployment.yaml
 - redis-service.yaml
-- post-deploy-test.yaml
