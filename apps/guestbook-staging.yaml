@@ -11,9 +11,12 @@ spec:
     repoURL: https://github.com/isouza-daitan/guestbook-go-config
     path: overlays/staging
     targetRevision: HEAD
+    kustomize:
+      images:
+        - guestbook-image=ghcr.io/isouza-daitan/guestbook:v1.6
   syncPolicy:
     automated:
       prune: true
       selfHeal: true
     syncOptions:
-    - CreateNamespace=true
+      - CreateNamespace=true
