@@ -15,7 +15,7 @@ spec:
     path: overlays/pr
     kustomize:
       images:
-        - guestbook-image=ghcr.io/isouza-daitan/guestbook:a73b406f3e692ec8934c14b2d4c6e819719f0a89
+        - guestbook-image=ghcr.io/isouza-daitan/guestbook:8793e1a8f2187180218e998782a318e1bcf0e94a
   syncPolicy:
     automated:
       prune: true
