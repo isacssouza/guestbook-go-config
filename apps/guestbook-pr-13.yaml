@@ -1,0 +1,24 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: guestbook-pr-13
+  namespace: argocd
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    namespace: guestbook-pr-13
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    repoURL: https://github.com/isouza-daitan/guestbook-go-config
+    path: overlays/pr
+    kustomize:
+      images:
+        - guestbook-image=ghcr.io/isouza-daitan/guestbook:a73b406f3e692ec8934c14b2d4c6e819719f0a89
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
