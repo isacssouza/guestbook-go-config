@@ -4,8 +4,8 @@ metadata:
   name: guestbook
 spec:
   template:
+    replicas: 4
     spec:
-      replicas: 4
       containers:
       - name: guestbook
         resources:
