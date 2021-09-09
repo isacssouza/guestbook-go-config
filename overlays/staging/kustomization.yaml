@@ -3,7 +3,7 @@ kind: Kustomization
 resources:
 - ../../base
 patchesStrategicMerge:
-- guestbook-deployment-kustomize.yaml
+- guestbook-deployment.yaml
 images:
 - name: guestbook
   newName: ghcr.io/isouza-daitan/guestbook
