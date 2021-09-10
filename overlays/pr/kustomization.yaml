@@ -5,4 +5,4 @@ resources:
 images:
 - name: guestbook
   newName: ghcr.io/isouza-daitan/guestbook
-  newTag: 5e1cf131f464a23817828de44d85a30c218965fc
+  newTag: d3a30acee23fb14ed6ee850cdba6269da28df012
