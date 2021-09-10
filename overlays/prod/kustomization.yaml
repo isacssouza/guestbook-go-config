@@ -6,5 +6,5 @@ patchesStrategicMerge:
 - guestbook-deployment.yaml
 images:
 - name: guestbook
-  newName: ghcr.io/isouza-daitan/guestbook
+  newName: ghcr.io/isacssouza/guestbook
   newTag: v1.6
