@@ -5,4 +5,4 @@ resources:
 images:
 - name: guestbook
   newName: ghcr.io/isacssouza/guestbook
-  newTag: 5498c19fbb924d452006a844361cafa4fa067390
+  newTag: 1d83444584b23ae0988cf6897f69124994e2f6ef
