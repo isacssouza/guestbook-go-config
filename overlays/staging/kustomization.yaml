@@ -7,4 +7,4 @@ patchesStrategicMerge:
 images:
 - name: guestbook
   newName: ghcr.io/isacssouza/guestbook
-  newTag: v2.2
+  newTag: v2.3
