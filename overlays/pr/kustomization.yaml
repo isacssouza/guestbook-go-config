@@ -4,5 +4,5 @@ resources:
 - ../../base
 images:
 - name: guestbook
-  newName: ghcr.io/isouza-daitan/guestbook
+  newName: ghcr.io/isacssouza/guestbook
   newTag: 5498c19fbb924d452006a844361cafa4fa067390
